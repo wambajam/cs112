@@ -5,31 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="jquery-3.7.1.js"></script>
     <link rel="stylesheet" href="style.css">
-<script>
-function submitForm() {
-var formData = {
-firstName: document.getElementById('firstName').value,
-lastName: document.getElementById('lastName').value,
-email: document.getElementById('email').value,
-problem: document.getElementById('problem').value
-};
-
-var jsonData = JSON.stringify(formData);
-  
-console.log(jsonData);
-        
-fetch('server-endpoint', {
-method: 'POST',
-headers: {
-'Content-Type': 'application/json',
-},
-body: jsonData,
-})
-.then(response => response.json())
-.then(data => console.log('Success:', data))
-.catch((error) => console.error('Error:', error));
-}
-</script>
 </head>
 <body>
     <nav class="navbar">
@@ -82,4 +57,29 @@ body: jsonData,
 </footer>
 </div>
 </body>
+<script>
+    function submitForm() {
+    var formData = {
+    firstName: document.getElementById('firstName').value,
+    lastName: document.getElementById('lastName').value,
+    email: document.getElementById('email').value,
+    problem: document.getElementById('problem').value
+    };
+
+    var jsonData = JSON.stringify(formData);
+
+    console.log(jsonData);
+
+    fetch('server-endpoint', {
+    method: 'POST',
+    headers: {
+    'Content-Type': 'application/json',
+    },
+    body: jsonData,
+    })
+    .then(response => response.json())
+    .then(data => console.log('Success:', data))
+    .catch((error) => console.error('Error:', error));
+    }
+</script>
 </html>
