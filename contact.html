@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ablu Automotive Home Service - Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="style.css">
+<script>
+function submitForm() {
+var formData = {
+firstName: document.getElementById('firstName').value,
+lastName: document.getElementById('lastName').value,
+email: document.getElementById('email').value,
+problem: document.getElementById('problem').value
+};
+
+var jsonData = JSON.stringify(formData);
+  
+console.log(jsonData);
+        
+fetch('server-endpoint', {
+method: 'POST',
+headers: {
+'Content-Type': 'application/json',
+},
+body: jsonData,
+})
+.then(response => response.json())
+.then(data => console.log('Success:', data))
+.catch((error) => console.error('Error:', error));
+}
+</script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="images/logo.jpeg" alt="Logo">
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+<header> 
+    <h1>Ablu Automotive Home Service</h1>
+</header>
+<div>
+    <a href="#" class="button">Give us a Call to Schedule!</a>
+</div>
+<br>
+<div class="content-container">
+<div class="form">
+    <h2>Or send us a message</h2>
+<form id="userForm">
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" name="firstName"><br><br>
+  
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" name="lastName"><br><br>
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email"><br><br>
+    
+  <label for="problem">Problem:</label>
+  <input type="problem" id="problem" name="problem"><br><br>
+  
+  <button type="button" onclick="submitForm()">Submit</button>
+</form>   
+</div>
+</div>
+<br>
+<div>
+<article>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184531.69394825035!2d-79.75954390000001!3d43.724934000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b15eaa5d05abf%3A0x352d31667cc38677!2sBrampton%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sus!4v1705881734859!5m2!1sen!2sus" width="620" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</article>
+</div>
+<div>
+<footer>
+    <p>Author: Michael Beltran - 2024</p>
+    <p><a href="mailto:mike.beltran@live.com">mike.beltran@live.com</a></p>
+</footer>
+</div>
+</body>
+</html>

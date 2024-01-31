@@ -1,0 +1,114 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #69a0bf;
+    color: white;
+    padding: 10px 20px;
+}
+.navbar-logo img {
+    height: 100px;
+}
+.navbar-menu {
+    list-style: none;
+    display: flex;
+}
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-menu li a:hover {
+    color: #d4aa4a;
+}
+.navbar a {
+    display: inline-block;
+    color: aliceblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: #e5e4e2;
+    color: cornflowerblue;
+}
+body {
+    background-color:cornflowerblue;
+    color: aliceblue;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+    }
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    height: 25%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.row {
+    content: "";
+    clear: both;
+    display:;
+}
+.column {
+    float: left;
+    width: 18%;
+    padding: 5px;
+    margin: 2px;
+}
+#image {
+    padding: 5px;
+    width: 175px;
+    transition: transform 1.5s ease;
+    display: block;
+}
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.button {
+    background-color: #eb6060;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#in, #out {
+    color: aliceblue;
+    background-color: #d4aa4a;
+}
+#in:hover, #out:hover {
+    color: aliceblue;
+    background-color: #ddd;
+    color: cornflowerblue;
+}
+form {
+    border: 2px solid #d4aa4a;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+        }

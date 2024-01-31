@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ablu Automotive Home Service - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        $(document).ready(function(){
+           $("#in").click(function(){
+                $("img").width($("img").width()+50);
+                $("img").height($("img").height()+50);
+           });
+           $("#out").click(function(){
+                $("img").width($("img").width()-50);
+                $("img").height($("img").height()-50);
+           });
+        });
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="images/logo.jpeg" alt="Logo">
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+<header> 
+    <h1>Ablu Automotive Home Service</h1>
+</header>
+<div class="content-container">
+        <div class="row">
+            <div class="column">
+            <button id="in">+</button>
+            </div>
+            <div class="column">
+            <button id="out">-</button>
+            </div>
+        </div>
+        <br>
+    <img id="image" src="images/home.jpeg" alt="home" class="center">
+    <br>
+    <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</article>
+</div>
+<br>
+<div>
+    <a href="#" class="button">Give me a Call to Schedule!</a>
+</div>
+<br>
+<div>
+<footer>
+    <p>Author: Michael Beltran - 2024</p>
+    <p><a href="mailto:mike.beltran@live.com">mike.beltran@live.com</a></p>
+</footer>
+</div>
+</body>
+</html>
